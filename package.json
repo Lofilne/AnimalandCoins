@@ -1,0 +1,19 @@
+{
+  "name": "Animal and coins",
+  "version": "0.0.0",
+  "author": "developer@ani.com",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "dev": "set NODE_ENV=development && vite --port 3000 --host",
+    "dev-telegram": "set NODE_ENV=development && vite --port 443 --host",
+    "build": "tsc && vite build",
+    "lint": "eslint --quiet --ext .tsx,.ts .",
+    "format": "yarn lint --fix",
+    "preview": "vite preview",
+    "test": "jest",
+    "metadata": "NODE_PATH=./src NODE_ENV=metadata vite-node --project metadata/node.tsconfig.json metadata/generateMetadata.ts",
+    "images": "NODE_PATH=./src NODE_ENV=metadata vite-node --project metadata/node.tsconfig.json metadata/generateImages.ts",
+    "translate": "NODE_PATH=./src NODE_ENV=metadata vite-node --project metadata/node.tsconfig.json _scripts/translate.ts",
+    "prepare": "husky install"
+  }
